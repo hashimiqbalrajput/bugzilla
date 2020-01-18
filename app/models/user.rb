@@ -7,5 +7,11 @@ class User < ApplicationRecord
   has_many :project_users
   has_many :projects, through: :project_users
 
+  after_create :send_email
+
   validates :email, presence: true
+
+  def send_email
+    UserMailer.with(user: self).welcome_email.deliver_now
+  end
 end

@@ -1,5 +1,7 @@
 {
   "name": "Bugzilla",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "react-on-rails": "11.3.0"
+  }
 }
