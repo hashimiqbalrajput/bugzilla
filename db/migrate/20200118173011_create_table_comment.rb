@@ -4,7 +4,7 @@ class CreateTableComment < ActiveRecord::Migration[6.0]
       t.references :task, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
       t.references :project, null: false, foreign_key: true
-      t.text :comment, null: true
+      t.text :comment_message, null: true
       t.timestamps
     end
   end
